@@ -1,0 +1,32 @@
+<html>
+<header>
+</header>
+<body>
+    <h1>please fill out the followinf form : </h1>
+    <form action="http://localhost:5000/" method="GET">
+        <h2>Personal Information</h2>
+        <lable> your first name is : </lable><input type="text" name="fname"/>
+        <lable> your last name is : </lable><input type="text"name="lname" />
+        <lable> your age is : </lable><input type="number" name="age" min="9" max="120" step="1">
+        <hr>
+        <h2>Credentials</h2>
+        <lable> your username is : </lable><input type="text" name="username" />
+        <lable> your password is : </lable><input type="password" name="pass"placeholder="Password" />
+        <hr>
+        <h2>Contact</h2>
+        <lable> your phone number : </lable><input type="number" name="phonenumber"/>
+        <lable> your email : </lable> <input type="email" name="email"/>
+        <hr>
+        <h2>Misc</h2>
+        <lable> your comments : </lable><textarea rows="4" name="comments" cols="50"></textarea>
+        <lable> your hobbies : </lable>
+        <select name="cars">
+            <option>read</option>
+            <option>sport</option>
+            <option>dance</option>
+            <option>travel</option>
+        </select>
+        <button>submit</button>
+    </form>
+</body>
+</html>
