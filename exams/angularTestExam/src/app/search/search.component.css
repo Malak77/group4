@@ -1,0 +1,14 @@
+#wrapper{ 
+     background-color: lightblue;
+        text-align: center;
+        margin-top:0px;
+    height: 100px;
+    width:100%;
+}
+
+#searchForm{
+top:20px ;
+    position: relative;
+
+
+}

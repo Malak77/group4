@@ -1,0 +1,11 @@
+<div id="wrapper">
+  <div id="searchForm">
+  <form #myForm="ngForm" (submit)="getSearchResutls()">
+    <label for="search"></label><input id="search" ngModel name="search" maxlength="5" minlength="2">
+    &nbsp; &nbsp;  <button type="submit">submit</button>
+  </form>
+</div>
+</div>
+<div id="results">
+
+</div>
