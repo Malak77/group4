@@ -1,11 +1,24 @@
 <div id="wrapper">
   <div id="searchForm">
-  <form #myForm="ngForm" (submit)="getSearchResutls()">
-    <label for="search"></label><input id="search" ngModel name="search" maxlength="5" minlength="2">
+  <form #myForm="ngForm" (submit)="getSearchResutls(myForm)">
+    <label for="search"></label><input id="search" ngModel name="search"  minlength="3">
     &nbsp; &nbsp;  <button type="submit">submit</button>
   </form>
+  <br>
+  <div class="errorInput" *ngIf="myForm.invalid">
+    please enter at least 3 charachters ..!
+  </div>
 </div>
 </div>
-<div id="results">
+
+<div id="results"     *ngFor="let book of booksArray">
+
+  <app-single-result   [title]="book.title"  [authors]="book.authors"  [previewLink]="book.previewLink" ></app-single-result>
+
 
 </div>
+
+<br>
+<button [disabled]="finishedData" (click)="loadMoreBooks()">Load More..</button>
+
+

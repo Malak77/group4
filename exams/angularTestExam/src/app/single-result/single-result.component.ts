@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-single-result',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleResultComponent implements OnInit {
 
-  constructor() { }
+  @Input() title:string;
+  @Input() authors:string[];
+  @Input() previewLink:string;
+
+
+  constructor() { 
+  }
 
   ngOnInit() {
   }
