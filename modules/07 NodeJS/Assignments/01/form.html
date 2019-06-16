@@ -1,0 +1,45 @@
+<html>
+    
+    <header>
+    <script src="server.js"></script>
+    </header>
+    
+    <body>
+    
+        <h1>please fill out the followinf form : </h1>
+    
+        <form method="GET" action="http://localhost:5000" >
+            <h2>Personal Information</h2>
+    
+            <lable> your first name is : </lable><input type="text" name="" />
+            <lable> your last name is : </lable><input type="text"  name=""  />
+            <lable> your age is : </lable><input type="number" name="age" min="9" max="120" step="1">
+            <hr>
+            <h2>Credentials</h2>
+    
+            <lable> your username is : </lable><input type="text"  name=""  />
+            <lable> your password is : </lable><input type="password"  name=""  placeholder="Password" />
+            <hr>
+            <h2>Contact</h2>
+    
+            <lable> your phone number : </lable><input type="number"   name="" />
+            <lable> your email : </lable> <input type="email" />
+            <hr>
+            <h2>Misc</h2>
+            <lable> your comments : </lable><textarea rows="4" cols="50" name="" ></textarea>
+            <lable> your hobbies : </lable>
+            <select name="cars">
+                <option>read</option>
+                <option>sport</option>
+                <option>dance</option>
+                <option>travel</option>
+            </select>
+    <button>submit</button>
+    
+    
+    
+        </form>
+    
+    </body>
+    
+    </html>
