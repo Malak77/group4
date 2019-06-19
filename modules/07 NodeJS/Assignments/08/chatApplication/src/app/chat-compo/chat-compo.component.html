@@ -1,0 +1,29 @@
+
+  
+    <div id="wrapper">
+      <form #chatDetailsForm="ngForm" (submit)="postChat(chatDetailsForm)">
+        Username:
+        <input minlength="2" ngModel name="username" minlength="2" ><br><br>
+        Message:
+        <input minlength="2"   ngModel name="message" minlength="2" ><br><br>
+        <button type="submit">send</button>
+      </form>
+      <div *ngIf="chatDetailsForm.invalid">
+        You have to insert at least 2 letters in username field .
+      </div>
+    
+
+      <div *ngIf="messages.length>0">
+          <br><br>
+
+          <!-- here must a component for each single message details that solve the delete problem -->
+        <ul *ngFor="let message of messages">
+           <li> {{message.username}} : {{message.message}}
+           <button [id]="message.id" (click)="deleteMessage($event)">Delete</button>
+          
+          
+          </li>
+        </ul>
+      </div>
+    </div>
+
